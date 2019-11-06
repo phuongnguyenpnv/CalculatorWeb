@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#soa, #sob{
+		height: 30px;
+		width: 60px;
+		margin-left: 30px;
+	}
+	button{
+		height: 30px;
+		width: 65px;
+		background-color: #CCCCCC;
+		color: black;
+		margin-top: 15px;
+		margin-left: 29px;
+	}
+	p{
+		margin-left: 30px;
+	}
+</style>	
+</head>
+<body>
+
+<h3>Calculator</h3>
+  <input id="soa" type="text">
+  <input id="sob" type="text">
+  <br>
+  <button onclick="tinhtong()">+</button>
+  <button onclick="tinhhieu()">-</button>
+  <br>
+  <button onclick="tinhnhan()">*</button>
+  <button onclick="tinhchia()">/</button>
+  <br>
+  <p id="ketqua">Kết quả: </p>
+
+<script type="text/javascript">
+	
+	function tinhtong(){
+		result = (getNumber1() + getNumber2());
+		document.getElementById("ketqua").innerHTML = result;
+	}
+
+	function tinhhieu(){
+		result = (getNumber1() - getNumber2());
+		document.getElementById("ketqua").innerHTML = result;
+	}
+
+	function tinhnhan(){
+		result = (getNumber1() * getNumber2());
+		document.getElementById("ketqua").innerHTML = result;
+	}
+
+	function tinhchia(){
+		result = (getNumber1() / getNumber2());
+		document.getElementById("ketqua").innerHTML = result;
+	}
+	function getNumber1(){
+		return parseInt(document.getElementById('soa').value);
+	}
+	function getNumber2(){
+		return parseInt(document.getElementById('sob').value);
+	}
+
+</script>
+</body>
+</html>
